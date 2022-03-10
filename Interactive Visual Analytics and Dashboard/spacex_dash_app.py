@@ -98,7 +98,7 @@ def get_scatter_plot(entered_site,payload_range):
     filtered_df = ranged_df.loc[ranged_df['Launch Site']==entered_site]
 
     if entered_site == 'ALL':
-        fig = px.scatter(spacex_df, x='Payload Mass (kg)', 
+        fig = px.scatter(ranged_df, x='Payload Mass (kg)', 
         y='class', 
         color='Booster Version Category',
         title='Correlation between Payload and Success for all Sites')
